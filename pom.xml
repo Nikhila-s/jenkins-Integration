@@ -79,9 +79,22 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
            <configuration>
+
+	<systemPropertyVariables>
+		
+	<browser>${Dbrowser}</browser>
+	<url>${Durl}</url>
+	<username>${Dusername}</username>
+	<password>${Dpassword}</password>
+
+	</systemPropertyVariables>
+
+
         <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
- 			<suiteXmlFile>test-output/testng-failed.xml</suiteXmlFile>
+         <!--   <suiteXmlFile>testng.xml</suiteXmlFile>
+ 			<suiteXmlFile>test-output/testng-failed.xml</suiteXmlFile> -->
+
+<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
         </suiteXmlFiles>
     </configuration>
         </plugin>

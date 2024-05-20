@@ -54,7 +54,8 @@ public class LoginTest extends BaseClass  {
 		
 	  System.out.println("Login Test");
 	  LoginPage lp=new LoginPage(driver);
-	  lp.login(config.getProperty("username"),config.getProperty("password"));
+//	  lp.login(config.getProperty("username"),config.getProperty("password")); // from config property file
+	  lp.login(System.getProperty("username"),System.getProperty("password"));  // from pom properties- using jenkins
   }
   
   @AfterMethod

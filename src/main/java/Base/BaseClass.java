@@ -30,7 +30,9 @@ public class BaseClass {
 		
 
 	try{
-			String browserName=config.getProperty("browser");
+//			String browserName=config.getProperty("browser");
+		String browserName=System.getProperty("browser");
+		
 			if(browserName.equalsIgnoreCase("Chrome")) {
 				 
 				WebDriverManager.chromedriver().setup();
@@ -53,7 +55,8 @@ public class BaseClass {
 
 			driver.manage().window().maximize();
 			
-			driver.get(config.getProperty("url"));
+//			driver.get(config.getProperty("url"));
+			driver.get(System.getProperty("url"));
 			//return driver;
 	}
 	catch(Exception e) {
