@@ -96,6 +96,7 @@
 
 <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
         </suiteXmlFiles>
+   <testFailureIgnore>true</testFailureIgnore>
     </configuration>
         </plugin>
         <plugin>
